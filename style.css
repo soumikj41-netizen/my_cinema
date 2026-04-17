@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin: 15px 0;
+  font-size: 24px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Main input */
+#movieInput {
+  width: 250px;
+}
+
+/* Search */
+#searchInput {
+  width: 260px;
+  margin-bottom: 15px;
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #ff4757;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #e84118;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Boxes */
+.box {
+  width: 48%;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List item */
+li {
+  background: #2f3542;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Buttons inside list */
+.actions button {
+  margin-left: 5px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+/* Stars */
+.stars {
+  color: gold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 🔥 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  /* Stack layout */
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  /* Full width inputs */
+  #movieInput,
+  #searchInput {
+    width: 90%;
+  }
+
+  /* Bigger touch buttons */
+  button {
+    width: auto;
+    font-size: 13px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.heart {
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.heart.active {
+  transform: scale(1.2);
+}

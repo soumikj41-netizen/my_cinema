@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Watchlist</title>
+  <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1>🎬 Movie Watchlist</h1>
+
+  <div class="input-section">
+    <input type="text" id="movieInput" placeholder="Enter movie name">
+    <button onclick="addMovie()">Add</button>
+  </div>
+
+  <!-- 🔍 Search -->
+  <input type="text" id="searchInput" placeholder="Search movies..." onkeyup="displayMovies()">
+
+  <div class="container">
+    <div class="box">
+      <h2>To Watch</h2>
+      <ul id="toWatchList"></ul>
+    </div>
+
+    <div class="box">
+      <h2>Watched</h2>
+      <ul id="watchedList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
