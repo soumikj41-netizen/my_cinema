@@ -15,11 +15,11 @@ function addMovie() {
 
   if (!name) return;
 
-  toWatch.push({
-    name: name,
-    rating: 0,
-    favorite: false
-  });
+ toWatch.unshift({
+  name: name,
+  rating: 0,
+  favorite: false
+});
 
   input.value = "";
   saveData();
@@ -115,7 +115,7 @@ function displayMovies() {
   watchedList.innerHTML = "";
 
   // ========= TO WATCH =========
-  toWatch.forEach((movie, index) => {
+  toWatch.reverse().forEach((movie, index) => {
     if (!movie.name.toLowerCase().includes(search)) return;
 
     const li = document.createElement("li");
